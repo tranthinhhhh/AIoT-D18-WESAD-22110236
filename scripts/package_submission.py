@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import shutil
 import zipfile
 from datetime import datetime
@@ -24,6 +25,10 @@ def zip_members() -> list[Path]:
     members: list[Path] = []
     for name in ["README.md", "requirements.txt", "TranTienThinh_final.ipynb"]:
         members.append(ROOT / name)
+    members.extend([
+        ROOT / ".build" / "pptx" / "build_deck.mjs",
+        ROOT / ".build" / "pptx" / "finalize_deck.mjs",
+    ])
     for folder, pattern in [("configs", "*.yaml"), ("src", "*.py"), ("scripts", "*.py"), ("docs", "*.md")]:
         members.extend(sorted((ROOT / folder).glob(pattern)))
     for name in ["manifest.json", "preprocessing_summary.json"]:
@@ -57,6 +62,7 @@ def zip_members() -> list[Path]:
 
 
 def main() -> None:
+    github_url = os.environ.get("GITHUB_URL", "").strip()
     SUBMISSION.mkdir(parents=True, exist_ok=True)
     shutil.copy2(ROOT / "TranTienThinh_final.docx", SUBMISSION / "TranTienThinh_final.docx")
     shutil.copy2(ROOT / "TranTienThinh_final.ipynb", SUBMISSION / "TranTienThinh_final.ipynb")
@@ -78,7 +84,7 @@ def main() -> None:
         "student": "Trần Tiến Thịnh",
         "student_id": "22110236",
         "project": "Đ18",
-        "github_status": "pending_real_repository_url",
+        "github_status": github_url or "pending_real_repository_url",
         "lms_submission": "not_performed",
         "files": files,
         "zip_member_count": len(members),

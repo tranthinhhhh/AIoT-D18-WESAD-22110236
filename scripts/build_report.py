@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import shutil
 from pathlib import Path
 
@@ -12,6 +13,7 @@ from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT, WD_TABLE_ALIGNMENT
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
+from docx.opc.constants import RELATIONSHIP_TYPE as RT
 from docx.shared import Cm, Inches, Pt, RGBColor
 
 
@@ -50,6 +52,24 @@ def add_page_number(paragraph) -> None:
     end = OxmlElement("w:fldChar")
     end.set(qn("w:fldCharType"), "end")
     run._r.extend([begin, instr, separate, end])
+
+
+def add_hyperlink(paragraph, text: str, url: str) -> None:
+    relationship_id = paragraph.part.relate_to(url, RT.HYPERLINK, is_external=True)
+    hyperlink = OxmlElement("w:hyperlink")
+    hyperlink.set(qn("r:id"), relationship_id)
+    run = OxmlElement("w:r")
+    properties = OxmlElement("w:rPr")
+    color = OxmlElement("w:color")
+    color.set(qn("w:val"), "0563C1")
+    underline = OxmlElement("w:u")
+    underline.set(qn("w:val"), "single")
+    properties.extend([color, underline])
+    node = OxmlElement("w:t")
+    node.text = text
+    run.extend([properties, node])
+    hyperlink.append(run)
+    paragraph._p.append(hyperlink)
 
 
 def remove_after_cover(doc: Document) -> None:
@@ -193,6 +213,7 @@ def aggregate_subject(summary: dict) -> list[list[object]]:
 
 
 def main() -> None:
+    github_url = os.environ.get("GITHUB_URL", "").strip()
     shutil.copy2(TEMPLATE, OUTPUT)
     doc = Document(OUTPUT)
     remove_after_cover(doc)
@@ -250,9 +271,14 @@ def main() -> None:
     table(doc, ["Thông tin", "Giá trị"], [["Dataset version", prep["dataset_version"]], ["Config hash", prep["config_hash"][:20] + "…"], ["Manifest hash", prep["manifest_hash"][:20] + "…"], ["Metric chính", "MAE_macro theo người"], ["Số seed", "42, 123, 999"]], [5, 11])
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.LEFT
-    r = p.add_run("Liên kết GitHub: CHƯA ĐƯỢC CẤU HÌNH — bản này chưa sẵn sàng nộp cho đến khi thay bằng URL repository thật.")
-    r.bold = True
-    r.font.color.rgb = RGBColor(0xC6, 0x28, 0x28)
+    if github_url:
+        r = p.add_run("Liên kết GitHub: ")
+        r.bold = True
+        add_hyperlink(p, github_url, github_url)
+    else:
+        r = p.add_run("Liên kết GitHub: CHƯA ĐƯỢC CẤU HÌNH — bản này chưa sẵn sàng nộp cho đến khi thay bằng URL repository thật.")
+        r.bold = True
+        r.font.color.rgb = RGBColor(0xC6, 0x28, 0x28)
 
     page(doc, "MỤC LỤC")
     toc = [
@@ -367,9 +393,14 @@ def main() -> None:
     body(doc, "Mỗi run chứa run_hash, config_hash và manifest_hash. Lệnh train trả lại metric cũ nếu run đã hoàn tất và hash khớp; resume chỉ chấp nhận last checkpoint tương thích. Cơ chế này ngăn huấn luyện trùng và tái sử dụng sai protocol.")
     body(doc, "Raw WESAD không được đóng gói lại. Người tái lập phải tự đặt dữ liệu theo README và tuân thủ điều kiện sử dụng. Notebook cuối kỳ mặc định đánh giá checkpoint; lệnh full train đặt riêng để tránh vô tình huấn luyện lại.")
     p = doc.add_paragraph()
-    r = p.add_run("Trạng thái GitHub: CHƯA CÓ REMOTE ĐƯỢC XÁC MINH. Cần thay dòng này bằng liên kết thật trước khi nộp.")
-    r.bold = True
-    r.font.color.rgb = RGBColor(0xC6, 0x28, 0x28)
+    if github_url:
+        r = p.add_run("Repository mã nguồn và artifact: ")
+        r.bold = True
+        add_hyperlink(p, github_url, github_url)
+    else:
+        r = p.add_run("Trạng thái GitHub: CHƯA CÓ REMOTE ĐƯỢC XÁC MINH. Cần thay dòng này bằng liên kết thật trước khi nộp.")
+        r.bold = True
+        r.font.color.rgb = RGBColor(0xC6, 0x28, 0x28)
 
     page(doc, "KẾT LUẬN", "14")
     body(doc, "Đồ án đã hoàn thiện một pipeline tái lập BVP→HR trên WESAD với split theo người, QC có dấu vết, ba seed cho E2/A0 và A3, cùng đối chứng E0/E1 trên cùng manifest. A0 đạt 8,867 ± 0,253 BPM và giảm 35,0% so với FFT. A3 đạt 8,280 ± 0,328 BPM, tốt nhất trong các cấu hình đã chạy.")

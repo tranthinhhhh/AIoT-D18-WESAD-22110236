@@ -4,7 +4,11 @@ __pycache__/
 .ipynb_checkpoints/
 .pytest_cache/
 .qa/
-.build/
+.build/*
+!.build/pptx/
+.build/pptx/*
+!.build/pptx/build_deck.mjs
+!.build/pptx/finalize_deck.mjs
 .chart-data-*/
 data/raw/
 data/cache/
