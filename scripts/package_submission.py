@@ -66,7 +66,13 @@ def main() -> None:
     SUBMISSION.mkdir(parents=True, exist_ok=True)
     shutil.copy2(ROOT / "TranTienThinh_final.docx", SUBMISSION / "TranTienThinh_final.docx")
     shutil.copy2(ROOT / "TranTienThinh_final.ipynb", SUBMISSION / "TranTienThinh_final.ipynb")
-    shutil.copy2(ROOT / ".qa" / "report_render2" / "TranTienThinh_final.pdf", SUBMISSION / "TranTienThinh_final.pdf")
+    report_pdf = Path(
+        os.environ.get(
+            "REPORT_PDF",
+            ROOT / ".qa" / "report_render2" / "TranTienThinh_final.pdf",
+        )
+    )
+    shutil.copy2(report_pdf, SUBMISSION / "TranTienThinh_final.pdf")
     shutil.copy2(ROOT / "docs" / "SUBMISSION_CHECKLIST.md", SUBMISSION / "SUBMISSION_CHECKLIST.md")
 
     archive = SUBMISSION / "TranTienThinh_code.zip"

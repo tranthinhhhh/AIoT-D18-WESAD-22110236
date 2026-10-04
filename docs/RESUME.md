@@ -8,13 +8,11 @@
 - Device: CPU; không có process train đang chạy.
 - Config/manifest hash: xem `docs/STATUS.md`.
 
-## Việc tiếp theo bắt buộc
+## Repository
 
-1. Nhận URL GitHub thật và lựa chọn public/private từ người dùng.
-2. Khởi tạo/kiểm tra local Git, commit và push đúng repository; không đưa raw WESAD, venv, cache hoặc artifact quá lớn ngoài chủ đích.
-3. Thay hai cảnh báo GitHub trong `scripts/build_report.py` và cảnh báo slide 11 trong `.build/pptx/build_deck.mjs` bằng URL thật.
-4. Dựng lại DOCX/PPTX, render và kiểm tra các trang/slide thay đổi.
-5. Cập nhật `docs/SUBMISSION_CHECKLIST.md`, tạo lại ZIP và để người dùng tự nộp LMS.
+Repository public đã được tạo: `https://github.com/tranthinhhhh/AIoT-D18-WESAD-22110236`.
+
+Nếu tiếp tục sau mốc hoàn thiện, trước hết kiểm tra `git status`, `git remote -v` và trạng thái branch GitHub; không chạy lại thí nghiệm khi artifact/hash vẫn hợp lệ.
 
 ## Không chạy lại
 

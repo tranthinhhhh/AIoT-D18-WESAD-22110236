@@ -1,5 +1,7 @@
 # Đ18 — Ước lượng nhịp tim từ BVP cổ tay trên WESAD
 
+Repository public: <https://github.com/tranthinhhhh/AIoT-D18-WESAD-22110236>
+
 **Sinh viên:** Trần Tiến Thịnh — **MSSV:** 22110236
 
 **Học phần:** Trí tuệ nhân tạo cho IoT
@@ -65,4 +67,4 @@ Kết quả chỉ áp dụng cho split WESAD cố định và các cửa sổ qu
 
 ## GitHub và nộp bài
 
-Repository remote chưa được xác minh. Báo cáo hiện ghi rõ trạng thái này và phải được thay bằng URL GitHub thật trước khi nộp. Hệ thống không tự nộp LMS.
+Mã nguồn và artifact được công khai tại <https://github.com/tranthinhhhh/AIoT-D18-WESAD-22110236>. Hệ thống không tự nộp LMS.

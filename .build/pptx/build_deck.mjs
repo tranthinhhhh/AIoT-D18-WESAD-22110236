@@ -342,7 +342,7 @@ function styleTable(table, rows, cols, headerFill = NAVY) {
   addText(slide, "• Xác minh nhãn ECG theo mẫu\n• Vùng tiếp nhận dài hơn\n• LOSO + validation nội bộ\n• Tiền xử lý streaming nhân quả\n• Benchmark trên phần cứng đích", 820, 260, 315, 205, { fontSize: 20, color: WHITE });
   addText(slide, GITHUB_URL ? `GitHub: ${GITHUB_URL}` : "GitHub: chờ URL repository thật trước khi nộp", 110, 600, 1060, 46, { fontSize: GITHUB_URL ? 18 : 21, bold: true, color: WHITE, fill: GITHUB_URL ? GREEN : RED, alignment: "center" });
   addText(slide, "Không tự nộp LMS", 495, 660, 290, 28, { fontSize: 14, color: "#B9D8EA", alignment: "center" });
-  addNotes(slide, "Kết luận ngắn gọn: mục tiêu tương đối đạt, mục tiêu tuyệt đối chưa đạt. Giá trị chính là pipeline minh bạch và tái lập. Nêu hướng tiếp theo. Trước khi nộp phải thay trường GitHub bằng URL thật; không tự nộp LMS. Nguồn: toàn bộ artifact protocol v2 trong dự án.");
+  addNotes(slide, "Kết luận ngắn gọn: mục tiêu tương đối đạt, mục tiêu tuyệt đối chưa đạt. Giá trị chính là pipeline minh bạch và tái lập. Nêu hướng tiếp theo và repository public đã xác minh. Không tự nộp LMS. Nguồn: toàn bộ artifact protocol v2 trong dự án.");
 }
 
 const candidatePath = path.join(buildDir, "candidate.pptx");

@@ -16,9 +16,9 @@
 
 ## Còn phải làm thủ công trước khi nộp
 
-- [ ] Cung cấp/tạo repository GitHub thật, push commit và xác minh URL mở được theo quyền mong muốn.
-- [ ] Chèn URL GitHub thật vào hai vị trí đỏ trong Word và dòng cuối slide 11; render lại.
-- [ ] Đổi checklist này sang trạng thái hoàn tất sau khi kiểm tra URL.
+- [x] Tạo repository GitHub public và xác minh URL: `https://github.com/tranthinhhhh/AIoT-D18-WESAD-22110236`.
+- [x] Chèn URL GitHub thật vào Word và slide 11; render lại.
+- [x] Đổi checklist sang trạng thái hoàn tất sau khi kiểm tra URL.
 - [ ] Mở DOCX/PPTX trên máy nộp một lần để kiểm tra font và media.
 - [ ] Tự tải các file trong `submission/` lên LMS trước 23:59 ngày 05/10/2026 (giờ Việt Nam).
 

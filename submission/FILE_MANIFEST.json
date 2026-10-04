@@ -1,25 +1,25 @@
 {
-  "created_at": "2026-10-04T16:56:37+07:00",
+  "created_at": "2026-10-04T17:35:24+07:00",
   "student": "Trần Tiến Thịnh",
   "student_id": "22110236",
   "project": "Đ18",
-  "github_status": "pending_real_repository_url",
+  "github_status": "https://github.com/tranthinhhhh/AIoT-D18-WESAD-22110236",
   "lms_submission": "not_performed",
   "files": [
     {
       "name": "SUBMISSION_CHECKLIST.md",
-      "bytes": 1449,
-      "sha256": "95894b5c9bfeb948a0057365202379f317002fb73b9432918bc39e4299a1a4c1"
+      "bytes": 1401,
+      "sha256": "a6541349f5ea2dc01ed0991e490253b68856630a9265d08caf18058afdca0d4b"
     },
     {
       "name": "TranTienThinh_code.zip",
-      "bytes": 1962797,
-      "sha256": "36212d4de3a3d99f5ed5b5f708388b1d466890daf4a4f76827cfff3b9e4ae26c"
+      "bytes": 1972421,
+      "sha256": "40f7c6b3a0278c590f51682e8ada0a3e6ca22b2809cb7a32a0a04511606795c1"
     },
     {
       "name": "TranTienThinh_final.docx",
-      "bytes": 1693403,
-      "sha256": "d046e0a6ca7194bb6c682a746efdf43e96b3d5c5d836a741fdf331a9dbff8c26"
+      "bytes": 1693491,
+      "sha256": "9159c7fb751370edd52a7fdca2cc9334b71da1cf6aa50cbd90d597b400ab1ad3"
     },
     {
       "name": "TranTienThinh_final.ipynb",
@@ -28,16 +28,16 @@
     },
     {
       "name": "TranTienThinh_final.pdf",
-      "bytes": 1690465,
-      "sha256": "033fe725fc356c6f7b2e33cfd9df87d5bc3c69724a91ffd79b7120e3630f7acc"
+      "bytes": 1690632,
+      "sha256": "ca345b1ef81387701497fdd04060997242fd9911628c6567bffda2f6bd9b251b"
     },
     {
       "name": "TranTienThinh_final.pptx",
-      "bytes": 617848,
-      "sha256": "65fd10fb4deb1abc52c46c5cfca58c24b6c2c4fe1c8d737e2c56932dbcf03f3d"
+      "bytes": 617835,
+      "sha256": "2fce1266ac8278fa769edb41e1e6fbf376f7fb3c2bd6dd8e936dcca638407290"
     }
   ],
-  "zip_member_count": 77,
+  "zip_member_count": 79,
   "exclusions": [
     "raw WESAD",
     "virtual environments",

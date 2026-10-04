@@ -1,6 +1,6 @@
 # Trạng thái đồ án Đ18
 
-Cập nhật: 16:54 ngày 04/10/2026, Asia/Ho_Chi_Minh. Hạn nộp: 23:59 ngày 05/10/2026.
+Cập nhật: 17:34 ngày 04/10/2026, Asia/Ho_Chi_Minh. Hạn nộp: 23:59 ngày 05/10/2026.
 
 ## Hoàn tất và đã xác minh
 
@@ -14,16 +14,18 @@ Cập nhật: 16:54 ngày 04/10/2026, Asia/Ho_Chi_Minh. Hạn nộp: 23:59 ngày
 - CPU network median/P95 = 0,2829/0,3260 ms; 100 warm-up, 1.000 lượt, 1 thread.
 - QC trực quan: 225 cửa sổ hợp lệ và 17 cửa sổ bị gắn cờ đã vẽ.
 - Notebook cuối kỳ chạy hết 14 cell, tái tính A0 seed 42 và khớp metric.
-- Word 21 trang đã render/duyệt; PPTX 11 slide đã finalizer/render/duyệt.
+- Word 21 trang đã render/duyệt và có hyperlink GitHub; PPTX 11 slide đã finalizer/render/duyệt với URL public.
+- Gói `submission/` đã tạo lại; notebook 14 cell không lỗi, ZIP 79 thành phần và không chứa raw/cache/`last.pt`.
 - Git repo cục bộ đã khởi tạo trên nhánh `main`; raw/cache/processed tensor/`last.pt` đều bị loại khỏi tracking.
 
 ## Không có tiến trình đang chạy
 
 Không có process train ở thời điểm cập nhật. Không cần tải lại WESAD hoặc train lại các run đã hoàn tất và đúng hash.
 
-## Chặn duy nhất
+## GitHub và giới hạn môi trường
 
-Chưa có repository/remote GitHub thật được xác minh. Word và slide đang đánh dấu đỏ trạng thái này, vì vậy chưa được gọi là bản sẵn sàng nộp. Không có CUDA; kết quả hợp lệ được huấn luyện/đo trên CPU.
+- Repository public: `https://github.com/tranthinhhhh/AIoT-D18-WESAD-22110236`.
+- Không có CUDA; kết quả hợp lệ được huấn luyện/đo trên CPU.
 
 ## Kết quả lịch sử không dùng
 

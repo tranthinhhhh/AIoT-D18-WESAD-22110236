@@ -9,6 +9,9 @@ const candidatePath = path.join(buildDir, "candidate.pptx");
 const finalPath = process.env.FINAL_PPTX
   ? path.resolve(process.env.FINAL_PPTX)
   : path.join(workspaceDir, "submission", "TranTienThinh_final.pptx");
+const receiptPath = process.env.FINAL_RECEIPT
+  ? path.resolve(process.env.FINAL_RECEIPT)
+  : path.join(buildDir, ".codex-finalizer", "TranTienThinh_final.pptx.validation.json");
 const pythonExecutable = "C:/Users/THINH 9A9/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe";
 const { finalizePresentation } = await import(
   pathToFileURL(path.join(skillDir, "container_tools/artifact_tool_utils.mjs")).href,
@@ -41,6 +44,6 @@ const result = await finalizePresentation({
   ],
   fontPolicy: { basis: "design", families: ["Arial"] },
   verifyArtifactToolImport: true,
-  receiptPath: path.join(stagingDir, "TranTienThinh_final.pptx.validation.json"),
+  receiptPath,
 });
 console.log(JSON.stringify(result, null, 2));
