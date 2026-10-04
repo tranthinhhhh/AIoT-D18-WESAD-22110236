@@ -1,0 +1,153 @@
+{
+  "status": "complete",
+  "created_at": "2026-10-04T16:34:11+07:00",
+  "figure_selection": "seed 42 fixed before test inspection; failure case selected on validation only",
+  "qc_review_windows": 242,
+  "tables": {
+    "overall": [
+      {
+        "method": "E0",
+        "seeds": 0,
+        "mae_macro_mean_bpm": 17.76776710544629,
+        "mae_macro_std_bpm": NaN,
+        "pooled_mae_mean_bpm": 17.761634450990904,
+        "pooled_rmse_mean_bpm": 26.30150427844824,
+        "pearson_mean": 1.2613111921235277e-16
+      },
+      {
+        "method": "E1",
+        "seeds": 0,
+        "mae_macro_mean_bpm": 13.637255315393732,
+        "mae_macro_std_bpm": NaN,
+        "pooled_mae_mean_bpm": 13.641801933631138,
+        "pooled_rmse_mean_bpm": 26.111755874493873,
+        "pearson_mean": 0.4763193330429522
+      },
+      {
+        "method": "A0",
+        "seeds": 3,
+        "mae_macro_mean_bpm": 8.86658750734574,
+        "mae_macro_std_bpm": 0.25333063514296233,
+        "pooled_mae_mean_bpm": 8.865363963937789,
+        "pooled_rmse_mean_bpm": 14.777103896816541,
+        "pearson_mean": 0.8345546324581709
+      },
+      {
+        "method": "A1",
+        "seeds": 3,
+        "mae_macro_mean_bpm": 9.13938884544659,
+        "mae_macro_std_bpm": 0.09524244843846315,
+        "pooled_mae_mean_bpm": 9.134287585992995,
+        "pooled_rmse_mean_bpm": 15.952660959590034,
+        "pearson_mean": 0.7822613968224624
+      },
+      {
+        "method": "A3",
+        "seeds": 3,
+        "mae_macro_mean_bpm": 8.280317886746777,
+        "mae_macro_std_bpm": 0.3283342798238556,
+        "pooled_mae_mean_bpm": 8.27934516626498,
+        "pooled_rmse_mean_bpm": 13.858976161794535,
+        "pearson_mean": 0.8505731970987465
+      }
+    ],
+    "paired_rows": [
+      {
+        "seed": 42,
+        "subject": "S14",
+        "fft_mae_bpm": 13.25050960862344,
+        "cnn_mae_bpm": 9.54772647572968,
+        "delta_cnn_minus_fft_bpm": -3.70278313289376
+      },
+      {
+        "seed": 42,
+        "subject": "S15",
+        "fft_mae_bpm": 13.289557076049046,
+        "cnn_mae_bpm": 3.9390159946220504,
+        "delta_cnn_minus_fft_bpm": -9.350541081426996
+      },
+      {
+        "seed": 42,
+        "subject": "S16",
+        "fft_mae_bpm": 13.54795453662873,
+        "cnn_mae_bpm": 12.253118106432076,
+        "delta_cnn_minus_fft_bpm": -1.2948364301966535
+      },
+      {
+        "seed": 42,
+        "subject": "S17",
+        "fft_mae_bpm": 14.461000040273708,
+        "cnn_mae_bpm": 9.916878577728182,
+        "delta_cnn_minus_fft_bpm": -4.544121462545526
+      },
+      {
+        "seed": 123,
+        "subject": "S14",
+        "fft_mae_bpm": 13.25050960862344,
+        "cnn_mae_bpm": 9.614391866734927,
+        "delta_cnn_minus_fft_bpm": -3.6361177418885138
+      },
+      {
+        "seed": 123,
+        "subject": "S15",
+        "fft_mae_bpm": 13.289557076049046,
+        "cnn_mae_bpm": 3.6854876822597817,
+        "delta_cnn_minus_fft_bpm": -9.604069393789265
+      },
+      {
+        "seed": 123,
+        "subject": "S16",
+        "fft_mae_bpm": 13.54795453662873,
+        "cnn_mae_bpm": 13.082061390993866,
+        "delta_cnn_minus_fft_bpm": -0.4658931456348636
+      },
+      {
+        "seed": 123,
+        "subject": "S17",
+        "fft_mae_bpm": 14.461000040273708,
+        "cnn_mae_bpm": 9.98903278881823,
+        "delta_cnn_minus_fft_bpm": -4.471967251455478
+      },
+      {
+        "seed": 999,
+        "subject": "S14",
+        "fft_mae_bpm": 13.25050960862344,
+        "cnn_mae_bpm": 9.056188474284022,
+        "delta_cnn_minus_fft_bpm": -4.194321134339418
+      },
+      {
+        "seed": 999,
+        "subject": "S15",
+        "fft_mae_bpm": 13.289557076049046,
+        "cnn_mae_bpm": 3.9390778843260326,
+        "delta_cnn_minus_fft_bpm": -9.350479191723014
+      },
+      {
+        "seed": 999,
+        "subject": "S16",
+        "fft_mae_bpm": 13.54795453662873,
+        "cnn_mae_bpm": 12.158372674272623,
+        "delta_cnn_minus_fft_bpm": -1.3895818623561063
+      },
+      {
+        "seed": 999,
+        "subject": "S17",
+        "fft_mae_bpm": 14.461000040273708,
+        "cnn_mae_bpm": 9.217698171947386,
+        "delta_cnn_minus_fft_bpm": -5.243301868326322
+      }
+    ]
+  },
+  "failure_case": {
+    "selection_rule": "largest absolute error on validation for fixed seed 42",
+    "window_id": "S11_002326000_002334000",
+    "subject": "S11",
+    "split": "validation",
+    "t_start_s": 2326.0,
+    "t_end_s": 2334.0,
+    "condition": "Stress",
+    "hr_ref_bpm": 132.61515601782688,
+    "hr_pred_bpm": 65.15975952148438,
+    "error_bpm": -67.4553964963425
+  }
+}

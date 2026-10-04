@@ -1,0 +1,1452 @@
+{
+  "status": "complete",
+  "created_at": "2026-10-04T16:33:58+07:00",
+  "variant": "A1",
+  "seeds": [
+    42,
+    123,
+    999
+  ],
+  "aggregate_across_seeds": {
+    "mae_macro_bpm": {
+      "mean": 9.13938884544659,
+      "std_sample": 0.09524244843846315,
+      "values": [
+        9.038799774982852,
+        9.151180093000857,
+        9.228186668356061
+      ]
+    },
+    "rmse_macro_bpm": {
+      "mean": 14.692914674246135,
+      "std_sample": 0.2526913664204825,
+      "values": [
+        14.590857695705655,
+        14.507212923555697,
+        14.980673403477057
+      ]
+    },
+    "pooled_mae_bpm": {
+      "mean": 9.134287585992995,
+      "std_sample": 0.0951673691734829,
+      "values": [
+        9.033570169813691,
+        9.14658279826283,
+        9.222709789902469
+      ]
+    },
+    "pooled_rmse_bpm": {
+      "mean": 15.952660959590034,
+      "std_sample": 0.3565080663324832,
+      "values": [
+        15.920751292150074,
+        15.613180382576886,
+        16.324051204043148
+      ]
+    },
+    "pooled_bias_bpm": {
+      "mean": -5.446738226079918,
+      "std_sample": 0.9376169161395254,
+      "values": [
+        -5.365439402246881,
+        -4.552417928667028,
+        -6.4223573473258435
+      ]
+    },
+    "pooled_pearson_r": {
+      "mean": 0.7822613968224624,
+      "std_sample": 0.0012867400347117768,
+      "values": [
+        0.7835677218972634,
+        0.7809951796250685,
+        0.7822212889450552
+      ]
+    }
+  },
+  "fft_mae_macro_bpm": 13.637255315393732,
+  "mae_macro_reduction_vs_fft_pct": 32.98219741380035,
+  "target_mae_le_7_bpm": false,
+  "target_reduction_ge_20_pct": true,
+  "runs": [
+    {
+      "status": "complete",
+      "completed_at": "2026-10-04T16:20:10+07:00",
+      "variant": "A1",
+      "seed": 42,
+      "run_hash": "b2dc6b040f06b162608e9abc0854c7c0a1a5d79139030a9ae18feee3b68d046a",
+      "config_hash": "a9c5a3bfb869a6b473307e3c61b7d4e7b5d23ffe37f3cd8406d7612d1172bf0a",
+      "manifest_hash": "bcc3bd93f84648772e6fad66980cbbcafa93c381ef3724b7d82aeff013841bd8",
+      "input_key": "bvp_filtered",
+      "loss": "Huber",
+      "huber_delta_bpm": 5.0,
+      "batchnorm": true,
+      "trainable_parameters": 11153,
+      "device": "cpu",
+      "best_epoch": 24,
+      "epochs_ran": 39,
+      "best_val_mae_macro_bpm": 11.897268855367127,
+      "training_seconds_this_invocation": 70.74537910000004,
+      "n_windows": {
+        "train": 9770,
+        "validation": 2208,
+        "test": 4444
+      },
+      "metrics": {
+        "validation": {
+          "mae_macro_bpm": 11.897268855367127,
+          "rmse_macro_bpm": 18.918625035087413,
+          "n_subjects": 2,
+          "pooled": {
+            "n_windows": 2208,
+            "mae_bpm": 11.900432779522847,
+            "rmse_bpm": 19.844803572473513,
+            "bias_bpm": -8.911494833267472,
+            "pearson_r": 0.3606892853842979,
+            "loa_lower_bpm": -43.67285297331313,
+            "loa_upper_bpm": 25.849863306778186,
+            "prediction_failures": 0
+          },
+          "by_subject": [
+            {
+              "subject": "S11",
+              "n_windows": 1105,
+              "mae_bpm": 15.390241123280498,
+              "rmse_bpm": 24.893328823309325,
+              "bias_bpm": -11.85969146029698,
+              "pearson_r": 0.4238953131196358,
+              "loa_lower_bpm": -54.77695346797031,
+              "loa_upper_bpm": 31.05757054737635,
+              "prediction_failures": 0
+            },
+            {
+              "subject": "S13",
+              "n_windows": 1103,
+              "mae_bpm": 8.404296587453754,
+              "rmse_bpm": 12.943921246865498,
+              "bias_bpm": -5.957952428129114,
+              "pearson_r": 0.3340643157654936,
+              "loa_lower_bpm": -28.49094014379672,
+              "loa_upper_bpm": 16.57503528753849,
+              "prediction_failures": 0
+            }
+          ],
+          "by_condition": [
+            {
+              "condition": "Amusement",
+              "n_subjects": 2,
+              "n_windows": 369,
+              "hr_ref_min_bpm": 59.09547738693252,
+              "hr_ref_median_bpm": 81.63265306122298,
+              "hr_ref_max_bpm": 98.49521203830444,
+              "mae_macro_bpm": 3.0436244721854404,
+              "rmse_macro_bpm": 4.1035059279683574,
+              "pooled": {
+                "n_windows": 369,
+                "mae_bpm": 3.054926131192686,
+                "rmse_bpm": 4.168305916557177,
+                "bias_bpm": -0.6220086250923421,
+                "pearson_r": 0.8865754553520869,
+                "loa_lower_bpm": -8.711382922075803,
+                "loa_upper_bpm": 7.467365671891119,
+                "prediction_failures": 0
+              },
+              "by_subject": [
+                {
+                  "subject": "S11",
+                  "n_windows": 181,
+                  "mae_bpm": 2.4478655902320496,
+                  "rmse_bpm": 3.445094113054167,
+                  "bias_bpm": -0.8197846940236734,
+                  "pearson_r": 0.8589574759300547,
+                  "loa_lower_bpm": -7.3964039825211785,
+                  "loa_upper_bpm": 5.7568345944738315,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S13",
+                  "n_windows": 188,
+                  "mae_bpm": 3.6393833541388307,
+                  "rmse_bpm": 4.761917742882548,
+                  "bias_bpm": -0.4315965587276029,
+                  "pearson_r": 0.6067296499070458,
+                  "loa_lower_bpm": -9.751360524522582,
+                  "loa_upper_bpm": 8.888167407067375,
+                  "prediction_failures": 0
+                }
+              ]
+            },
+            {
+              "condition": "Baseline",
+              "n_subjects": 2,
+              "n_windows": 1174,
+              "hr_ref_min_bpm": 64.62781304096771,
+              "hr_ref_median_bpm": 80.3554390147358,
+              "hr_ref_max_bpm": 102.0242914979746,
+              "mae_macro_bpm": 3.5997252066919945,
+              "rmse_macro_bpm": 4.781997207415529,
+              "pooled": {
+                "n_windows": 1174,
+                "mae_bpm": 3.5997252066919945,
+                "rmse_bpm": 4.785573149959942,
+                "bias_bpm": 1.2022377915278735,
+                "pearson_r": 0.813125828140349,
+                "loa_lower_bpm": -7.880544007412058,
+                "loa_upper_bpm": 10.285019590467805,
+                "prediction_failures": 0
+              },
+              "by_subject": [
+                {
+                  "subject": "S11",
+                  "n_windows": 587,
+                  "mae_bpm": 3.373899610406695,
+                  "rmse_bpm": 4.597029421334792,
+                  "bias_bpm": 2.770180006940956,
+                  "pearson_r": 0.7264631931243364,
+                  "loa_lower_bpm": -4.426450359364989,
+                  "loa_upper_bpm": 9.9668103732469,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S13",
+                  "n_windows": 587,
+                  "mae_bpm": 3.8255508029772938,
+                  "rmse_bpm": 4.966964993496265,
+                  "bias_bpm": -0.36570442388520913,
+                  "pearson_r": 0.495189723413324,
+                  "loa_lower_bpm": -10.08281307721245,
+                  "loa_upper_bpm": 9.351404229442032,
+                  "prediction_failures": 0
+                }
+              ]
+            },
+            {
+              "condition": "Stress",
+              "n_subjects": 2,
+              "n_windows": 665,
+              "hr_ref_min_bpm": 89.30987821380397,
+              "hr_ref_median_bpm": 119.88582302569148,
+              "hr_ref_max_bpm": 139.26272674078476,
+              "mae_macro_bpm": 31.30085698646442,
+              "rmse_macro_bpm": 33.54765692836109,
+              "pooled": {
+                "n_windows": 665,
+                "mae_bpm": 31.46287284529314,
+                "rmse_bpm": 35.461476155365446,
+                "bias_bpm": -31.3661452277432,
+                "pearson_r": -0.4597939098802685,
+                "loa_lower_bpm": -63.815447022344614,
+                "loa_upper_bpm": 1.083156566858218,
+                "prediction_failures": 0
+              },
+              "by_subject": [
+                {
+                  "subject": "S11",
+                  "n_windows": 337,
+                  "mae_bpm": 43.27202877769799,
+                  "rmse_bpm": 44.59480875679434,
+                  "bias_bpm": -43.27202877769799,
+                  "pearson_r": -0.4854237724631774,
+                  "loa_lower_bpm": -64.4340764055778,
+                  "loa_upper_bpm": -22.109981149818186,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S13",
+                  "n_windows": 328,
+                  "mae_bpm": 19.32968519523085,
+                  "rmse_bpm": 22.500505099927846,
+                  "bias_bpm": -19.1335758486738,
+                  "pearson_r": 0.04940426063630318,
+                  "loa_lower_bpm": -42.374885843033304,
+                  "loa_upper_bpm": 4.107734145685704,
+                  "prediction_failures": 0
+                }
+              ]
+            }
+          ]
+        },
+        "test": {
+          "mae_macro_bpm": 9.038799774982852,
+          "rmse_macro_bpm": 14.590857695705655,
+          "n_subjects": 4,
+          "pooled": {
+            "n_windows": 4444,
+            "mae_bpm": 9.033570169813691,
+            "rmse_bpm": 15.920751292150074,
+            "bias_bpm": -5.365439402246881,
+            "pearson_r": 0.7835677218972634,
+            "loa_lower_bpm": -34.747987066544866,
+            "loa_upper_bpm": 24.017108262051103,
+            "prediction_failures": 0
+          },
+          "by_subject": [
+            {
+              "subject": "S14",
+              "n_windows": 1104,
+              "mae_bpm": 9.390836758493396,
+              "rmse_bpm": 17.41867149679254,
+              "bias_bpm": -6.1206665206494275,
+              "pearson_r": 0.7707977455265547,
+              "loa_lower_bpm": -38.09863391145589,
+              "loa_upper_bpm": 25.857300870157033,
+              "prediction_failures": 0
+            },
+            {
+              "subject": "S15",
+              "n_windows": 1108,
+              "mae_bpm": 3.2593349873471515,
+              "rmse_bpm": 4.40678518831783,
+              "bias_bpm": -0.5930375715628001,
+              "pearson_r": 0.7019334780376945,
+              "loa_lower_bpm": -9.155632914797685,
+              "loa_upper_bpm": 7.969557771672085,
+              "prediction_failures": 0
+            },
+            {
+              "subject": "S16",
+              "n_windows": 1102,
+              "mae_bpm": 14.08292938671354,
+              "rmse_bpm": 21.852559918196377,
+              "bias_bpm": -9.381481234673721,
+              "pearson_r": 0.8072978891107452,
+              "loa_lower_bpm": -48.082224674095535,
+              "loa_upper_bpm": 29.319262204748092,
+              "prediction_failures": 0
+            },
+            {
+              "subject": "S17",
+              "n_windows": 1130,
+              "mae_bpm": 9.422097967377322,
+              "rmse_bpm": 14.685414179515874,
+              "bias_bpm": -5.390547712288625,
+              "pearson_r": 0.8544714721332777,
+              "loa_lower_bpm": -32.17656106095876,
+              "loa_upper_bpm": 21.39546563638151,
+              "prediction_failures": 0
+            }
+          ],
+          "by_condition": [
+            {
+              "condition": "Amusement",
+              "n_subjects": 4,
+              "n_windows": 730,
+              "hr_ref_min_bpm": 59.96328778298976,
+              "hr_ref_median_bpm": 80.25990088840622,
+              "hr_ref_max_bpm": 100.53859964093336,
+              "mae_macro_bpm": 3.5408361950574374,
+              "rmse_macro_bpm": 4.749958726972074,
+              "pooled": {
+                "n_windows": 730,
+                "mae_bpm": 3.5406317474695665,
+                "rmse_bpm": 5.023030979617933,
+                "bias_bpm": 0.1390055988985484,
+                "pearson_r": 0.7449973892251779,
+                "loa_lower_bpm": -9.70911214046207,
+                "loa_upper_bpm": 9.987123338259165,
+                "prediction_failures": 0
+              },
+              "by_subject": [
+                {
+                  "subject": "S14",
+                  "n_windows": 183,
+                  "mae_bpm": 2.6329168311474316,
+                  "rmse_bpm": 3.820644350271313,
+                  "bias_bpm": -1.3841273477916938,
+                  "pearson_r": 0.5246465669008384,
+                  "loa_lower_bpm": -8.383054731486478,
+                  "loa_upper_bpm": 5.61480003590309,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S15",
+                  "n_windows": 183,
+                  "mae_bpm": 2.219461876528776,
+                  "rmse_bpm": 2.899837540751267,
+                  "bias_bpm": 0.9453292400935884,
+                  "pearson_r": 0.8098140079525317,
+                  "loa_lower_bpm": -4.442604828408088,
+                  "loa_upper_bpm": 6.333263308595265,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S16",
+                  "n_windows": 181,
+                  "mae_bpm": 3.61545956463049,
+                  "rmse_bpm": 5.016074841523451,
+                  "bias_bpm": -0.3682661016400893,
+                  "pearson_r": 0.61864480552774,
+                  "loa_lower_bpm": -10.200438987673387,
+                  "loa_upper_bpm": 9.46390678439321,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S17",
+                  "n_windows": 183,
+                  "mae_bpm": 5.695506507923053,
+                  "rmse_bpm": 7.263278175342266,
+                  "bias_bpm": 1.3575426519210372,
+                  "pearson_r": 0.5781324564714232,
+                  "loa_lower_bpm": -12.665983499530032,
+                  "loa_upper_bpm": 15.381068803372106,
+                  "prediction_failures": 0
+                }
+              ]
+            },
+            {
+              "condition": "Baseline",
+              "n_subjects": 4,
+              "n_windows": 2347,
+              "hr_ref_min_bpm": 54.0077153879122,
+              "hr_ref_median_bpm": 71.2166172106824,
+              "hr_ref_max_bpm": 102.30466554244066,
+              "mae_macro_bpm": 3.426851398826707,
+              "rmse_macro_bpm": 4.74188303434039,
+              "pooled": {
+                "n_windows": 2347,
+                "mae_bpm": 3.4270240426892253,
+                "rmse_bpm": 4.850496301295287,
+                "bias_bpm": 1.566526358569691,
+                "pearson_r": 0.8605344152661126,
+                "loa_lower_bpm": -7.432903272548527,
+                "loa_upper_bpm": 10.56595598968791,
+                "prediction_failures": 0
+              },
+              "by_subject": [
+                {
+                  "subject": "S14",
+                  "n_windows": 587,
+                  "mae_bpm": 2.5075782775996336,
+                  "rmse_bpm": 3.382048025163367,
+                  "bias_bpm": 2.131018220287749,
+                  "pearson_r": 0.8462134380049835,
+                  "loa_lower_bpm": -3.0207551248647277,
+                  "loa_upper_bpm": 7.282791565440226,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S15",
+                  "n_windows": 585,
+                  "mae_bpm": 3.2352703411124524,
+                  "rmse_bpm": 4.344516539013561,
+                  "bias_bpm": -1.1474212434008937,
+                  "pearson_r": 0.6263900044657581,
+                  "loa_lower_bpm": -9.36735231604969,
+                  "loa_upper_bpm": 7.0725098292479025,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S16",
+                  "n_windows": 587,
+                  "mae_bpm": 4.515672547865276,
+                  "rmse_bpm": 6.166778047788061,
+                  "bias_bpm": 3.309291415927937,
+                  "pearson_r": 0.7168113434451171,
+                  "loa_lower_bpm": -6.898517587552309,
+                  "loa_upper_bpm": 13.517100419408184,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S17",
+                  "n_windows": 588,
+                  "mae_bpm": 3.448884428729465,
+                  "rmse_bpm": 5.07418952539657,
+                  "bias_bpm": 1.963294276350305,
+                  "pearson_r": 0.8082833713236002,
+                  "loa_lower_bpm": -7.215319204261747,
+                  "loa_upper_bpm": 11.141907756962357,
+                  "prediction_failures": 0
+                }
+              ]
+            },
+            {
+              "condition": "Stress",
+              "n_subjects": 4,
+              "n_windows": 1367,
+              "hr_ref_min_bpm": 70.39597737272153,
+              "hr_ref_median_bpm": 117.12214166201407,
+              "hr_ref_max_bpm": 154.50145208131764,
+              "mae_macro_bpm": 21.681517853382275,
+              "rmse_macro_bpm": 24.92706985622098,
+              "pooled": {
+                "n_windows": 1367,
+                "mae_bpm": 21.5927573012492,
+                "rmse_bpm": 27.751443934275617,
+                "bias_bpm": -20.206381970990595,
+                "pearson_r": 0.41654750645272043,
+                "loa_lower_bpm": -57.503573240834484,
+                "loa_upper_bpm": 17.090809298853298,
+                "prediction_failures": 0
+              },
+              "by_subject": [
+                {
+                  "subject": "S14",
+                  "n_windows": 334,
+                  "mae_bpm": 25.190753150675885,
+                  "rmse_bpm": 31.221595791796574,
+                  "bias_bpm": -23.218048591197594,
+                  "pearson_r": -0.4567566840611457,
+                  "loa_lower_bpm": -64.19183347901613,
+                  "loa_upper_bpm": 17.755736296620938,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S15",
+                  "n_windows": 340,
+                  "mae_bpm": 3.8604367441914498,
+                  "rmse_bpm": 5.126763606245137,
+                  "bias_bpm": -0.4671748612917248,
+                  "pearson_r": 0.6212690631235296,
+                  "loa_lower_bpm": -10.488573011765416,
+                  "loa_upper_bpm": 9.554223289181968,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S16",
+                  "n_windows": 334,
+                  "mae_bpm": 36.569731189710424,
+                  "rmse_bpm": 38.6666092108771,
+                  "bias_bpm": -36.569731189710424,
+                  "pearson_r": 0.1710431728637024,
+                  "loa_lower_bpm": -61.22487858188992,
+                  "loa_upper_bpm": -11.91458379753093,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S17",
+                  "n_windows": 359,
+                  "mae_bpm": 21.105150328951336,
+                  "rmse_bpm": 24.693310815965116,
+                  "bias_bpm": -20.875114915547844,
+                  "pearson_r": 0.49661539170602587,
+                  "loa_lower_bpm": -46.76456933158989,
+                  "loa_upper_bpm": 5.014339500494202,
+                  "prediction_failures": 0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "status": "complete",
+      "completed_at": "2026-10-04T16:21:08+07:00",
+      "variant": "A1",
+      "seed": 123,
+      "run_hash": "b2dc6b040f06b162608e9abc0854c7c0a1a5d79139030a9ae18feee3b68d046a",
+      "config_hash": "a9c5a3bfb869a6b473307e3c61b7d4e7b5d23ffe37f3cd8406d7612d1172bf0a",
+      "manifest_hash": "bcc3bd93f84648772e6fad66980cbbcafa93c381ef3724b7d82aeff013841bd8",
+      "input_key": "bvp_filtered",
+      "loss": "Huber",
+      "huber_delta_bpm": 5.0,
+      "batchnorm": true,
+      "trainable_parameters": 11153,
+      "device": "cpu",
+      "best_epoch": 16,
+      "epochs_ran": 31,
+      "best_val_mae_macro_bpm": 11.787953954895766,
+      "training_seconds_this_invocation": 57.81826739999997,
+      "n_windows": {
+        "train": 9770,
+        "validation": 2208,
+        "test": 4444
+      },
+      "metrics": {
+        "validation": {
+          "mae_macro_bpm": 11.787953954895766,
+          "rmse_macro_bpm": 18.8045037278494,
+          "n_subjects": 2,
+          "pooled": {
+            "n_windows": 2208,
+            "mae_bpm": 11.790240303681335,
+            "rmse_bpm": 19.44178121401072,
+            "bias_bpm": -10.03974408804701,
+            "pearson_r": 0.4935620629487704,
+            "loa_lower_bpm": -42.67901091984345,
+            "loa_upper_bpm": 22.599522743749432,
+            "prediction_failures": 0
+          },
+          "by_subject": [
+            {
+              "subject": "S11",
+              "n_windows": 1105,
+              "mae_bpm": 14.312083014165491,
+              "rmse_bpm": 23.72445217469933,
+              "bias_bpm": -11.928884061841806,
+              "pearson_r": 0.5969110015100099,
+              "loa_lower_bpm": -52.141487635099956,
+              "loa_upper_bpm": 28.283719511416344,
+              "prediction_failures": 0
+            },
+            {
+              "subject": "S13",
+              "n_windows": 1103,
+              "mae_bpm": 9.26382489562604,
+              "rmse_bpm": 13.884555280999468,
+              "bias_bpm": -8.147178656457484,
+              "pearson_r": 0.3719510700153371,
+              "loa_lower_bpm": -30.193394206518853,
+              "loa_upper_bpm": 13.899036893603885,
+              "prediction_failures": 0
+            }
+          ],
+          "by_condition": [
+            {
+              "condition": "Amusement",
+              "n_subjects": 2,
+              "n_windows": 369,
+              "hr_ref_min_bpm": 59.09547738693252,
+              "hr_ref_median_bpm": 81.63265306122298,
+              "hr_ref_max_bpm": 98.49521203830444,
+              "mae_macro_bpm": 3.160340827039959,
+              "rmse_macro_bpm": 4.31159454764713,
+              "pooled": {
+                "n_windows": 369,
+                "mae_bpm": 3.17382436416978,
+                "rmse_bpm": 4.409484627296411,
+                "bias_bpm": -0.48359100121578613,
+                "pearson_r": 0.852947823231763,
+                "loa_lower_bpm": -9.085712518427604,
+                "loa_upper_bpm": 8.118530515996033,
+                "prediction_failures": 0
+              },
+              "by_subject": [
+                {
+                  "subject": "S11",
+                  "n_windows": 181,
+                  "mae_bpm": 2.4495657983394326,
+                  "rmse_bpm": 3.465810426064173,
+                  "bias_bpm": 0.7343542904457456,
+                  "pearson_r": 0.849597752112179,
+                  "loa_lower_bpm": -5.922811651891082,
+                  "loa_upper_bpm": 7.391520232782573,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S13",
+                  "n_windows": 188,
+                  "mae_bpm": 3.8711158557404857,
+                  "rmse_bpm": 5.157378669230086,
+                  "bias_bpm": -1.656187266060133,
+                  "pearson_r": 0.5704545785209352,
+                  "loa_lower_bpm": -11.254819470577054,
+                  "loa_upper_bpm": 7.942444938456788,
+                  "prediction_failures": 0
+                }
+              ]
+            },
+            {
+              "condition": "Baseline",
+              "n_subjects": 2,
+              "n_windows": 1174,
+              "hr_ref_min_bpm": 64.62781304096771,
+              "hr_ref_median_bpm": 80.3554390147358,
+              "hr_ref_max_bpm": 102.0242914979746,
+              "mae_macro_bpm": 3.3897503533283566,
+              "rmse_macro_bpm": 4.60100735446578,
+              "pooled": {
+                "n_windows": 1174,
+                "mae_bpm": 3.389750353328357,
+                "rmse_bpm": 4.716290483883442,
+                "bias_bpm": -0.967075363066379,
+                "pearson_r": 0.8104602217006073,
+                "loa_lower_bpm": -10.018440819981672,
+                "loa_upper_bpm": 8.084290093848916,
+                "prediction_failures": 0
+              },
+              "by_subject": [
+                {
+                  "subject": "S11",
+                  "n_windows": 587,
+                  "mae_bpm": 2.501725525980172,
+                  "rmse_bpm": 3.564606248464198,
+                  "bias_bpm": 1.0027809582575682,
+                  "pearson_r": 0.739081705692083,
+                  "loa_lower_bpm": -5.707411612762712,
+                  "loa_upper_bpm": 7.712973529277848,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S13",
+                  "n_windows": 587,
+                  "mae_bpm": 4.277775180676541,
+                  "rmse_bpm": 5.637408460467362,
+                  "bias_bpm": -2.9369316843903266,
+                  "pearson_r": 0.48878947322476235,
+                  "loa_lower_bpm": -12.376386052247076,
+                  "loa_upper_bpm": 6.502522683466422,
+                  "prediction_failures": 0
+                }
+              ]
+            },
+            {
+              "condition": "Stress",
+              "n_subjects": 2,
+              "n_windows": 665,
+              "hr_ref_min_bpm": 89.30987821380397,
+              "hr_ref_median_bpm": 119.88582302569148,
+              "hr_ref_max_bpm": 139.26272674078476,
+              "mae_macro_bpm": 31.266534480276604,
+              "rmse_macro_bpm": 33.31462100643816,
+              "pooled": {
+                "n_windows": 665,
+                "mae_bpm": 31.40171802307105,
+                "rmse_bpm": 34.712519231075504,
+                "bias_bpm": -31.359343444690598,
+                "pearson_r": -0.27548452922331973,
+                "loa_lower_bpm": -60.55507019034734,
+                "loa_upper_bpm": -2.163616699033863,
+                "prediction_failures": 0
+              },
+              "by_subject": [
+                {
+                  "subject": "S11",
+                  "n_windows": 337,
+                  "mae_bpm": 41.25509625342156,
+                  "rmse_bpm": 42.625831584746706,
+                  "bias_bpm": -41.25509625342156,
+                  "pearson_r": -0.48557481366600197,
+                  "loa_lower_bpm": -62.30304606353953,
+                  "loa_upper_bpm": -20.207146443303593,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S13",
+                  "n_windows": 328,
+                  "mae_bpm": 21.277972707131646,
+                  "rmse_bpm": 24.003410428129616,
+                  "bias_bpm": -21.192060833281026,
+                  "pearson_r": 0.13854437955303883,
+                  "loa_lower_bpm": -43.319135609303224,
+                  "loa_upper_bpm": 0.9350139427411719,
+                  "prediction_failures": 0
+                }
+              ]
+            }
+          ]
+        },
+        "test": {
+          "mae_macro_bpm": 9.151180093000857,
+          "rmse_macro_bpm": 14.507212923555697,
+          "n_subjects": 4,
+          "pooled": {
+            "n_windows": 4444,
+            "mae_bpm": 9.14658279826283,
+            "rmse_bpm": 15.613180382576886,
+            "bias_bpm": -4.552417928667028,
+            "pearson_r": 0.7809951796250685,
+            "loa_lower_bpm": -33.82783079235029,
+            "loa_upper_bpm": 24.72299493501624,
+            "prediction_failures": 0
+          },
+          "by_subject": [
+            {
+              "subject": "S14",
+              "n_windows": 1104,
+              "mae_bpm": 9.008313532466355,
+              "rmse_bpm": 17.088987641368853,
+              "bias_bpm": -6.312734841766884,
+              "pearson_r": 0.7814423573345899,
+              "loa_lower_bpm": -37.45216420084852,
+              "loa_upper_bpm": 24.826694517314753,
+              "prediction_failures": 0
+            },
+            {
+              "subject": "S15",
+              "n_windows": 1108,
+              "mae_bpm": 4.274589189369117,
+              "rmse_bpm": 5.292852389923145,
+              "bias_bpm": 0.7950459655699313,
+              "pearson_r": 0.5396566917018325,
+              "loa_lower_bpm": -9.46587205213089,
+              "loa_upper_bpm": 11.055963983270754,
+              "prediction_failures": 0
+            },
+            {
+              "subject": "S16",
+              "n_windows": 1102,
+              "mae_bpm": 13.84510538834294,
+              "rmse_bpm": 21.10940041609632,
+              "bias_bpm": -8.285719300334478,
+              "pearson_r": 0.8143788010193799,
+              "loa_lower_bpm": -46.356973194566955,
+              "loa_upper_bpm": 29.785534593898,
+              "prediction_failures": 0
+            },
+            {
+              "subject": "S17",
+              "n_windows": 1130,
+              "mae_bpm": 9.476712261825016,
+              "rmse_bpm": 14.537611246834466,
+              "bias_bpm": -4.435163071299574,
+              "pearson_r": 0.8380107365210075,
+              "loa_lower_bpm": -31.582489067658138,
+              "loa_upper_bpm": 22.71216292505899,
+              "prediction_failures": 0
+            }
+          ],
+          "by_condition": [
+            {
+              "condition": "Amusement",
+              "n_subjects": 4,
+              "n_windows": 730,
+              "hr_ref_min_bpm": 59.96328778298976,
+              "hr_ref_median_bpm": 80.25990088840622,
+              "hr_ref_max_bpm": 100.53859964093336,
+              "mae_macro_bpm": 5.220123635232522,
+              "rmse_macro_bpm": 6.0642047502532,
+              "pooled": {
+                "n_windows": 730,
+                "mae_bpm": 5.221356427746841,
+                "rmse_bpm": 6.2940773309238525,
+                "bias_bpm": 3.1368846481213115,
+                "pearson_r": 0.6871418654026828,
+                "loa_lower_bpm": -7.565542445831406,
+                "loa_upper_bpm": 13.83931174207403,
+                "prediction_failures": 0
+              },
+              "by_subject": [
+                {
+                  "subject": "S14",
+                  "n_windows": 183,
+                  "mae_bpm": 3.4952876110805025,
+                  "rmse_bpm": 4.301745753326157,
+                  "bias_bpm": 1.1777380366697559,
+                  "pearson_r": 0.3487052948414171,
+                  "loa_lower_bpm": -6.953783085696116,
+                  "loa_upper_bpm": 9.309259159035626,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S15",
+                  "n_windows": 183,
+                  "mae_bpm": 5.0712423935560755,
+                  "rmse_bpm": 5.4807282005188585,
+                  "bias_bpm": 4.555616849089703,
+                  "pearson_r": 0.7512097978002495,
+                  "loa_lower_bpm": -1.4330577953307335,
+                  "loa_upper_bpm": 10.54429149351014,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S16",
+                  "n_windows": 181,
+                  "mae_bpm": 4.770154367505862,
+                  "rmse_bpm": 5.6434314614866645,
+                  "bias_bpm": 1.9776765273363004,
+                  "pearson_r": 0.5602294603302332,
+                  "loa_lower_bpm": -8.410752519599798,
+                  "loa_upper_bpm": 12.366105574272398,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S17",
+                  "n_windows": 183,
+                  "mae_bpm": 7.543810168787646,
+                  "rmse_bpm": 8.830913585681119,
+                  "bias_bpm": 4.823838238178722,
+                  "pearson_r": 0.5289375202283034,
+                  "loa_lower_bpm": -9.714058582993292,
+                  "loa_upper_bpm": 19.36173505935074,
+                  "prediction_failures": 0
+                }
+              ]
+            },
+            {
+              "condition": "Baseline",
+              "n_subjects": 4,
+              "n_windows": 2347,
+              "hr_ref_min_bpm": 54.0077153879122,
+              "hr_ref_median_bpm": 71.2166172106824,
+              "hr_ref_max_bpm": 102.30466554244066,
+              "mae_macro_bpm": 3.4275406934386705,
+              "rmse_macro_bpm": 4.729851923727741,
+              "pooled": {
+                "n_windows": 2347,
+                "mae_bpm": 3.4271334251836736,
+                "rmse_bpm": 4.904418546462314,
+                "bias_bpm": 1.6689591654160723,
+                "pearson_r": 0.8604871584738434,
+                "loa_lower_bpm": -7.371924525947693,
+                "loa_upper_bpm": 10.709842856779838,
+                "prediction_failures": 0
+              },
+              "by_subject": [
+                {
+                  "subject": "S14",
+                  "n_windows": 587,
+                  "mae_bpm": 1.9335050004261327,
+                  "rmse_bpm": 2.7114219482800075,
+                  "bias_bpm": 0.6829969473002664,
+                  "pearson_r": 0.8378965198718701,
+                  "loa_lower_bpm": -4.464410060889643,
+                  "loa_upper_bpm": 5.8304039554901745,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S15",
+                  "n_windows": 585,
+                  "mae_bpm": 3.8654150266120695,
+                  "rmse_bpm": 4.8884514081695185,
+                  "bias_bpm": 0.06924265842536174,
+                  "pearson_r": 0.5137219505314967,
+                  "loa_lower_bpm": -9.519359770862733,
+                  "loa_upper_bpm": 9.657845087713456,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S16",
+                  "n_windows": 587,
+                  "mae_bpm": 4.563811981409217,
+                  "rmse_bpm": 6.329323458402231,
+                  "bias_bpm": 3.7923823576348923,
+                  "pearson_r": 0.7081509853633162,
+                  "loa_lower_bpm": -6.148120659864121,
+                  "loa_upper_bpm": 13.732885375133906,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S17",
+                  "n_windows": 588,
+                  "mae_bpm": 3.3474307653072626,
+                  "rmse_bpm": 4.990210880059208,
+                  "bias_bpm": 2.1249873368295016,
+                  "pearson_r": 0.8199397648512097,
+                  "loa_lower_bpm": -6.7322532391725805,
+                  "loa_upper_bpm": 10.982227912831585,
+                  "prediction_failures": 0
+                }
+              ]
+            },
+            {
+              "condition": "Stress",
+              "n_subjects": 4,
+              "n_windows": 1367,
+              "hr_ref_min_bpm": 70.39597737272153,
+              "hr_ref_median_bpm": 117.12214166201407,
+              "hr_ref_max_bpm": 154.50145208131764,
+              "mae_macro_bpm": 21.147093064783895,
+              "rmse_macro_bpm": 24.47266594325971,
+              "pooled": {
+                "n_windows": 1367,
+                "mae_bpm": 21.06242985685351,
+                "rmse_bpm": 27.019022736527365,
+                "bias_bpm": -19.340101118768363,
+                "pearson_r": 0.43156628343471504,
+                "loa_lower_bpm": -56.334221551666445,
+                "loa_upper_bpm": 17.654019314129716,
+                "prediction_failures": 0
+              },
+              "by_subject": [
+                {
+                  "subject": "S14",
+                  "n_windows": 334,
+                  "mae_bpm": 24.46279362803887,
+                  "rmse_bpm": 30.69567898385394,
+                  "bias_bpm": -22.711690221815754,
+                  "pearson_r": -0.38645558017113835,
+                  "loa_lower_bpm": -63.24552932821591,
+                  "loa_upper_bpm": 17.822148884584397,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S15",
+                  "n_windows": 340,
+                  "mae_bpm": 4.549822568329876,
+                  "rmse_bpm": 5.831730036999766,
+                  "bias_bpm": 0.01978262143891644,
+                  "pearson_r": 0.44891261132966165,
+                  "loa_lower_bpm": -11.427188662978287,
+                  "loa_upper_bpm": 11.466753905856118,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S16",
+                  "n_windows": 334,
+                  "mae_bpm": 35.074702288467506,
+                  "rmse_bpm": 37.18293969714491,
+                  "bias_bpm": -35.074702288467506,
+                  "pearson_r": 0.18799368663361168,
+                  "loa_lower_bpm": -59.30221544526542,
+                  "loa_upper_bpm": -10.847189131669595,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S17",
+                  "n_windows": 359,
+                  "mae_bpm": 20.50105377429933,
+                  "rmse_bpm": 24.18031505504022,
+                  "bias_bpm": -19.89969142677151,
+                  "pearson_r": 0.48511276269391934,
+                  "loa_lower_bpm": -46.860699680798575,
+                  "loa_upper_bpm": 7.061316827255553,
+                  "prediction_failures": 0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "status": "complete",
+      "completed_at": "2026-10-04T16:22:48+07:00",
+      "variant": "A1",
+      "seed": 999,
+      "run_hash": "b2dc6b040f06b162608e9abc0854c7c0a1a5d79139030a9ae18feee3b68d046a",
+      "config_hash": "a9c5a3bfb869a6b473307e3c61b7d4e7b5d23ffe37f3cd8406d7612d1172bf0a",
+      "manifest_hash": "bcc3bd93f84648772e6fad66980cbbcafa93c381ef3724b7d82aeff013841bd8",
+      "input_key": "bvp_filtered",
+      "loss": "Huber",
+      "huber_delta_bpm": 5.0,
+      "batchnorm": true,
+      "trainable_parameters": 11153,
+      "device": "cpu",
+      "best_epoch": 36,
+      "epochs_ran": 51,
+      "best_val_mae_macro_bpm": 11.80666015891478,
+      "training_seconds_this_invocation": 98.7315645000001,
+      "n_windows": {
+        "train": 9770,
+        "validation": 2208,
+        "test": 4444
+      },
+      "metrics": {
+        "validation": {
+          "mae_macro_bpm": 11.80666015891478,
+          "rmse_macro_bpm": 18.998263045272413,
+          "n_subjects": 2,
+          "pooled": {
+            "n_windows": 2208,
+            "mae_bpm": 11.809676330861807,
+            "rmse_bpm": 19.945081999493596,
+            "bias_bpm": -10.01455804346459,
+            "pearson_r": 0.41783104523624515,
+            "loa_lower_bpm": -43.82951325862573,
+            "loa_upper_bpm": 23.800397171696552,
+            "prediction_failures": 0
+          },
+          "by_subject": [
+            {
+              "subject": "S11",
+              "n_windows": 1105,
+              "mae_bpm": 15.136513988431291,
+              "rmse_bpm": 25.05333521192134,
+              "bias_bpm": -12.937921497382053,
+              "pearson_r": 0.4740527192542741,
+              "loa_lower_bpm": -55.00706091566309,
+              "loa_upper_bpm": 29.13121792089898,
+              "prediction_failures": 0
+            },
+            {
+              "subject": "S13",
+              "n_windows": 1103,
+              "mae_bpm": 8.476806329398269,
+              "rmse_bpm": 12.943190878623488,
+              "bias_bpm": -7.085893839857338,
+              "pearson_r": 0.44253897818230625,
+              "loa_lower_bpm": -28.324802953576985,
+              "loa_upper_bpm": 14.153015273862309,
+              "prediction_failures": 0
+            }
+          ],
+          "by_condition": [
+            {
+              "condition": "Amusement",
+              "n_subjects": 2,
+              "n_windows": 369,
+              "hr_ref_min_bpm": 59.09547738693252,
+              "hr_ref_median_bpm": 81.63265306122298,
+              "hr_ref_max_bpm": 98.49521203830444,
+              "mae_macro_bpm": 3.0791176119980754,
+              "rmse_macro_bpm": 4.152739587761916,
+              "pooled": {
+                "n_windows": 369,
+                "mae_bpm": 3.088643909225338,
+                "rmse_bpm": 4.218388200055765,
+                "bias_bpm": -1.8131736601023722,
+                "pearson_r": 0.8966708159656666,
+                "loa_lower_bpm": -9.28862034706661,
+                "loa_upper_bpm": 5.662273026861865,
+                "prediction_failures": 0
+              },
+              "by_subject": [
+                {
+                  "subject": "S11",
+                  "n_windows": 181,
+                  "mae_bpm": 2.576945658160962,
+                  "rmse_bpm": 3.4860254334229177,
+                  "bias_bpm": -1.6677922966099452,
+                  "pearson_r": 0.8794060138668697,
+                  "loa_lower_bpm": -7.684354596342146,
+                  "loa_upper_bpm": 4.348770003122256,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S13",
+                  "n_windows": 188,
+                  "mae_bpm": 3.5812895658351884,
+                  "rmse_bpm": 4.819453742100913,
+                  "bias_bpm": -1.9531418877200815,
+                  "pearson_r": 0.6280233574696971,
+                  "loa_lower_bpm": -10.611857695010917,
+                  "loa_upper_bpm": 6.705573919570755,
+                  "prediction_failures": 0
+                }
+              ]
+            },
+            {
+              "condition": "Baseline",
+              "n_subjects": 2,
+              "n_windows": 1174,
+              "hr_ref_min_bpm": 64.62781304096771,
+              "hr_ref_median_bpm": 80.3554390147358,
+              "hr_ref_max_bpm": 102.0242914979746,
+              "mae_macro_bpm": 3.2711782171232,
+              "rmse_macro_bpm": 4.448533660076258,
+              "pooled": {
+                "n_windows": 1174,
+                "mae_bpm": 3.2711782171231993,
+                "rmse_bpm": 4.500312582177596,
+                "bias_bpm": -0.3128069878191189,
+                "pearson_r": 0.8258897172232871,
+                "loa_lower_bpm": -9.115836123698967,
+                "loa_upper_bpm": 8.49022214806073,
+                "prediction_failures": 0
+              },
+              "by_subject": [
+                {
+                  "subject": "S11",
+                  "n_windows": 587,
+                  "mae_bpm": 2.6765025232958406,
+                  "rmse_bpm": 3.7678269593052796,
+                  "bias_bpm": 1.1819096473492654,
+                  "pearson_r": 0.7484241435443235,
+                  "loa_lower_bpm": -5.836273143655417,
+                  "loa_upper_bpm": 8.200092438353948,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S13",
+                  "n_windows": 587,
+                  "mae_bpm": 3.865853910950559,
+                  "rmse_bpm": 5.129240360847237,
+                  "bias_bpm": -1.8075236229875036,
+                  "pearson_r": 0.5309374222461313,
+                  "loa_lower_bpm": -11.22394903262094,
+                  "loa_upper_bpm": 7.608901786645934,
+                  "prediction_failures": 0
+                }
+              ]
+            },
+            {
+              "condition": "Stress",
+              "n_subjects": 2,
+              "n_windows": 665,
+              "hr_ref_min_bpm": 89.30987821380397,
+              "hr_ref_median_bpm": 119.88582302569148,
+              "hr_ref_max_bpm": 139.26272674078476,
+              "mae_macro_bpm": 31.56009603781405,
+              "rmse_macro_bpm": 33.72356589208353,
+              "pooled": {
+                "n_windows": 665,
+                "mae_bpm": 31.722845878400125,
+                "rmse_bpm": 35.7100524547347,
+                "bias_bpm": -31.69300402359758,
+                "pearson_r": -0.39665216156414174,
+                "loa_lower_bpm": -63.96874218195365,
+                "loa_upper_bpm": 0.5827341347584891,
+                "prediction_failures": 0
+              },
+              "by_subject": [
+                {
+                  "subject": "S11",
+                  "n_windows": 337,
+                  "mae_bpm": 43.58550092556317,
+                  "rmse_bpm": 45.020337540196664,
+                  "bias_bpm": -43.58550092556317,
+                  "pearson_r": -0.48031538307837435,
+                  "loa_lower_bpm": -65.71816937161131,
+                  "loa_upper_bpm": -21.452832479515024,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S13",
+                  "n_windows": 328,
+                  "mae_bpm": 19.53469115006493,
+                  "rmse_bpm": 22.42679424397039,
+                  "bias_bpm": -19.474188609078062,
+                  "pearson_r": 0.18981158102044543,
+                  "loa_lower_bpm": -41.30822068967656,
+                  "loa_upper_bpm": 2.3598434715204313,
+                  "prediction_failures": 0
+                }
+              ]
+            }
+          ]
+        },
+        "test": {
+          "mae_macro_bpm": 9.228186668356061,
+          "rmse_macro_bpm": 14.980673403477057,
+          "n_subjects": 4,
+          "pooled": {
+            "n_windows": 4444,
+            "mae_bpm": 9.222709789902469,
+            "rmse_bpm": 16.324051204043148,
+            "bias_bpm": -6.4223573473258435,
+            "pearson_r": 0.7822212889450552,
+            "loa_lower_bpm": -35.840557930500566,
+            "loa_upper_bpm": 22.99584323584888,
+            "prediction_failures": 0
+          },
+          "by_subject": [
+            {
+              "subject": "S14",
+              "n_windows": 1104,
+              "mae_bpm": 9.496673790992883,
+              "rmse_bpm": 17.878575446785085,
+              "bias_bpm": -7.871206338321271,
+              "pearson_r": 0.7869962449202125,
+              "loa_lower_bpm": -39.348659585532445,
+              "loa_upper_bpm": 23.6062469088899,
+              "prediction_failures": 0
+            },
+            {
+              "subject": "S15",
+              "n_windows": 1108,
+              "mae_bpm": 3.439110173434396,
+              "rmse_bpm": 4.647347428078452,
+              "bias_bpm": -1.2201870226430123,
+              "pearson_r": 0.7410805376260629,
+              "loa_lower_bpm": -10.01339167608628,
+              "loa_upper_bpm": 7.573017630800257,
+              "prediction_failures": 0
+            },
+            {
+              "subject": "S16",
+              "n_windows": 1102,
+              "mae_bpm": 14.396696152194947,
+              "rmse_bpm": 22.420389242235395,
+              "bias_bpm": -10.22163777254144,
+              "pearson_r": 0.7940490712160942,
+              "loa_lower_bpm": -49.35070189820016,
+              "loa_upper_bpm": 28.907426353117273,
+              "prediction_failures": 0
+            },
+            {
+              "subject": "S17",
+              "n_windows": 1130,
+              "mae_bpm": 9.580266556802014,
+              "rmse_bpm": 14.976381496809301,
+              "bias_bpm": -6.402594873964813,
+              "pearson_r": 0.8550652879124563,
+              "loa_lower_bpm": -32.95036883687182,
+              "loa_upper_bpm": 20.145179088942193,
+              "prediction_failures": 0
+            }
+          ],
+          "by_condition": [
+            {
+              "condition": "Amusement",
+              "n_subjects": 4,
+              "n_windows": 730,
+              "hr_ref_min_bpm": 59.96328778298976,
+              "hr_ref_median_bpm": 80.25990088840622,
+              "hr_ref_max_bpm": 100.53859964093336,
+              "mae_macro_bpm": 3.5190025368713442,
+              "rmse_macro_bpm": 4.830896206262732,
+              "pooled": {
+                "n_windows": 730,
+                "mae_bpm": 3.5189496129826807,
+                "rmse_bpm": 5.023657522824781,
+                "bias_bpm": -1.2302882149375363,
+                "pearson_r": 0.7665758540711596,
+                "loa_lower_bpm": -10.783366894947832,
+                "loa_upper_bpm": 8.32279046507276,
+                "prediction_failures": 0
+              },
+              "by_subject": [
+                {
+                  "subject": "S14",
+                  "n_windows": 183,
+                  "mae_bpm": 3.3070591720177074,
+                  "rmse_bpm": 4.524140534783615,
+                  "bias_bpm": -2.647462278711904,
+                  "pearson_r": 0.49816421516647014,
+                  "loa_lower_bpm": -9.857689443061766,
+                  "loa_upper_bpm": 4.562764885637956,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S15",
+                  "n_windows": 183,
+                  "mae_bpm": 2.1823177771171998,
+                  "rmse_bpm": 2.8429485637074334,
+                  "bias_bpm": -1.2064420134818044,
+                  "pearson_r": 0.8455287999709128,
+                  "loa_lower_bpm": -6.265849163490782,
+                  "loa_upper_bpm": 3.8529651365271738,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S16",
+                  "n_windows": 181,
+                  "mae_bpm": 3.538319756233613,
+                  "rmse_bpm": 5.289271196617557,
+                  "bias_bpm": -1.2756880356519809,
+                  "pearson_r": 0.6187527731470105,
+                  "loa_lower_bpm": -11.36452853269167,
+                  "loa_upper_bpm": 8.813152461387707,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S17",
+                  "n_windows": 183,
+                  "mae_bpm": 5.048313442116857,
+                  "rmse_bpm": 6.667224529942322,
+                  "bias_bpm": 0.20794329519156113,
+                  "pearson_r": 0.6475256446565671,
+                  "loa_lower_bpm": -12.889293247748704,
+                  "loa_upper_bpm": 13.305179838131824,
+                  "prediction_failures": 0
+                }
+              ]
+            },
+            {
+              "condition": "Baseline",
+              "n_subjects": 4,
+              "n_windows": 2347,
+              "hr_ref_min_bpm": 54.0077153879122,
+              "hr_ref_median_bpm": 71.2166172106824,
+              "hr_ref_max_bpm": 102.30466554244066,
+              "mae_macro_bpm": 3.377713068872138,
+              "rmse_macro_bpm": 4.670282385064372,
+              "pooled": {
+                "n_windows": 2347,
+                "mae_bpm": 3.3777187549797087,
+                "rmse_bpm": 4.829590388737707,
+                "bias_bpm": 0.44195138118416544,
+                "pearson_r": 0.849586624130315,
+                "loa_lower_bpm": -8.986337542547307,
+                "loa_upper_bpm": 9.870240304915637,
+                "prediction_failures": 0
+              },
+              "by_subject": [
+                {
+                  "subject": "S14",
+                  "n_windows": 587,
+                  "mae_bpm": 1.9492659621417123,
+                  "rmse_bpm": 2.8126613885986362,
+                  "bias_bpm": 0.3824554123565477,
+                  "pearson_r": 0.8369376158083367,
+                  "loa_lower_bpm": -5.083816429380472,
+                  "loa_upper_bpm": 5.848727254093567,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S15",
+                  "n_windows": 585,
+                  "mae_bpm": 3.448913852013577,
+                  "rmse_bpm": 4.539433220236714,
+                  "bias_bpm": -2.0434697647851086,
+                  "pearson_r": 0.6577675482808938,
+                  "loa_lower_bpm": -9.99508613979126,
+                  "loa_upper_bpm": 5.908146610221042,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S16",
+                  "n_windows": 587,
+                  "mae_bpm": 4.5792125317095325,
+                  "rmse_bpm": 6.209754491612629,
+                  "bias_bpm": 2.5611247646327024,
+                  "pearson_r": 0.6960093319899328,
+                  "loa_lower_bpm": -8.53605895975365,
+                  "loa_upper_bpm": 13.658308489019056,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S17",
+                  "n_windows": 588,
+                  "mae_bpm": 3.533459929623731,
+                  "rmse_bpm": 5.119280439809508,
+                  "bias_bpm": 0.8585172451459775,
+                  "pearson_r": 0.7943685092152729,
+                  "loa_lower_bpm": -9.041592042593487,
+                  "loa_upper_bpm": 10.758626532885442,
+                  "prediction_failures": 0
+                }
+              ]
+            },
+            {
+              "condition": "Stress",
+              "n_subjects": 4,
+              "n_windows": 1367,
+              "hr_ref_min_bpm": 70.39597737272153,
+              "hr_ref_median_bpm": 117.12214166201407,
+              "hr_ref_max_bpm": 154.50145208131764,
+              "mae_macro_bpm": 22.39515816618389,
+              "rmse_macro_bpm": 25.66138833360168,
+              "pooled": {
+                "n_windows": 1367,
+                "mae_bpm": 22.303864792181297,
+                "rmse_bpm": 28.508992972421044,
+                "bias_bpm": -20.980325929956752,
+                "pearson_r": 0.3843420982038512,
+                "loa_lower_bpm": -58.82717800825628,
+                "loa_upper_bpm": 16.866526148342775,
+                "prediction_failures": 0
+              },
+              "by_subject": [
+                {
+                  "subject": "S14",
+                  "n_windows": 334,
+                  "mae_bpm": 26.152445859280594,
+                  "rmse_bpm": 32.11585358138553,
+                  "bias_bpm": -25.239004573520056,
+                  "pearson_r": -0.45515132779548745,
+                  "loa_lower_bpm": -64.22306193876634,
+                  "loa_upper_bpm": 13.74505279172623,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S15",
+                  "n_windows": 340,
+                  "mae_bpm": 4.098692104485062,
+                  "rmse_bpm": 5.529747845726237,
+                  "bias_bpm": 0.18894552875882653,
+                  "pearson_r": 0.6667450191554298,
+                  "loa_lower_bpm": -10.658996059751942,
+                  "loa_upper_bpm": 11.036887117269597,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S16",
+                  "n_windows": 334,
+                  "mae_bpm": 37.535106370440275,
+                  "rmse_bpm": 39.69371975014146,
+                  "bias_bpm": -37.535106370440275,
+                  "pearson_r": 0.11572963695944724,
+                  "loa_lower_bpm": -62.87964192790376,
+                  "loa_upper_bpm": -12.190570812976784,
+                  "prediction_failures": 0
+                },
+                {
+                  "subject": "S17",
+                  "n_windows": 359,
+                  "mae_bpm": 21.794388330529635,
+                  "rmse_bpm": 25.306232157153485,
+                  "bias_bpm": -21.665164263916797,
+                  "pearson_r": 0.5004130132032542,
+                  "loa_lower_bpm": -47.333216040699966,
+                  "loa_upper_bpm": 4.002887512866369,
+                  "prediction_failures": 0
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "selection_rule": "largest absolute error on validation for fixed seed 42",
+  "window_id": "S11_002326000_002334000",
+  "subject": "S11",
+  "split": "validation",
+  "t_start_s": 2326.0,
+  "t_end_s": 2334.0,
+  "condition": "Stress",
+  "hr_ref_bpm": 132.61515601782688,
+  "hr_pred_bpm": 65.15975952148438,
+  "error_bpm": -67.4553964963425
+}

@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-10-04T16:12:46+07:00",
+  "manifest_hash": "bcc3bd93f84648772e6fad66980cbbcafa93c381ef3724b7d82aeff013841bd8",
+  "output_shape": [
+    8,
+    1
+  ],
+  "trainable_parameters": 11153,
+  "loss_finite": true,
+  "gradient_finite": true,
+  "overfit_initial_loss": 359.0379943847656,
+  "overfit_final_loss": 11.40556526184082,
+  "overfit_loss_decreased": true,
+  "generator_state_saved": true
+}

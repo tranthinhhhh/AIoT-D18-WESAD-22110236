@@ -1,0 +1,262 @@
+{
+  "dataset_version": "wesad_d18_v2_order4_0p5_8hz",
+  "created_at": "2026-10-04T16:12:26+07:00",
+  "config_hash": "a9c5a3bfb869a6b473307e3c61b7d4e7b5d23ffe37f3cd8406d7612d1172bf0a",
+  "manifest_hash": "bcc3bd93f84648772e6fad66980cbbcafa93c381ef3724b7d82aeff013841bd8",
+  "source_files": [
+    {
+      "subject": "S2",
+      "path": "D:\\TriTueNhanTaoIOT\\giuaky_cuoiKy\\data\\raw\\WESAD\\S2\\S2.pkl",
+      "bytes": 975117737,
+      "mtime_ns": 1511509416000000000
+    },
+    {
+      "subject": "S3",
+      "path": "D:\\TriTueNhanTaoIOT\\giuaky_cuoiKy\\data\\raw\\WESAD\\S3\\S3.pkl",
+      "bytes": 1031507132,
+      "mtime_ns": 1511509626000000000
+    },
+    {
+      "subject": "S4",
+      "path": "D:\\TriTueNhanTaoIOT\\giuaky_cuoiKy\\data\\raw\\WESAD\\S4\\S4.pkl",
+      "bytes": 1034344388,
+      "mtime_ns": 1511509904000000000
+    },
+    {
+      "subject": "S5",
+      "path": "D:\\TriTueNhanTaoIOT\\giuaky_cuoiKy\\data\\raw\\WESAD\\S5\\S5.pkl",
+      "bytes": 993435543,
+      "mtime_ns": 1511510052000000000
+    },
+    {
+      "subject": "S6",
+      "path": "D:\\TriTueNhanTaoIOT\\giuaky_cuoiKy\\data\\raw\\WESAD\\S6\\S6.pkl",
+      "bytes": 1123292444,
+      "mtime_ns": 1511510236000000000
+    },
+    {
+      "subject": "S7",
+      "path": "D:\\TriTueNhanTaoIOT\\giuaky_cuoiKy\\data\\raw\\WESAD\\S7\\S7.pkl",
+      "bytes": 829424437,
+      "mtime_ns": 1511510362000000000
+    },
+    {
+      "subject": "S8",
+      "path": "D:\\TriTueNhanTaoIOT\\giuaky_cuoiKy\\data\\raw\\WESAD\\S8\\S8.pkl",
+      "bytes": 869469022,
+      "mtime_ns": 1511510492000000000
+    },
+    {
+      "subject": "S9",
+      "path": "D:\\TriTueNhanTaoIOT\\giuaky_cuoiKy\\data\\raw\\WESAD\\S9\\S9.pkl",
+      "bytes": 832647582,
+      "mtime_ns": 1511510636000000000
+    },
+    {
+      "subject": "S10",
+      "path": "D:\\TriTueNhanTaoIOT\\giuaky_cuoiKy\\data\\raw\\WESAD\\S10\\S10.pkl",
+      "bytes": 867178991,
+      "mtime_ns": 1511510836000000000
+    },
+    {
+      "subject": "S11",
+      "path": "D:\\TriTueNhanTaoIOT\\giuaky_cuoiKy\\data\\raw\\WESAD\\S11\\S11.pkl",
+      "bytes": 831090213,
+      "mtime_ns": 1511511614000000000
+    },
+    {
+      "subject": "S13",
+      "path": "D:\\TriTueNhanTaoIOT\\giuaky_cuoiKy\\data\\raw\\WESAD\\S13\\S13.pkl",
+      "bytes": 885309681,
+      "mtime_ns": 1511511810000000000
+    },
+    {
+      "subject": "S14",
+      "path": "D:\\TriTueNhanTaoIOT\\giuaky_cuoiKy\\data\\raw\\WESAD\\S14\\S14.pkl",
+      "bytes": 881137147,
+      "mtime_ns": 1511511948000000000
+    },
+    {
+      "subject": "S15",
+      "path": "D:\\TriTueNhanTaoIOT\\giuaky_cuoiKy\\data\\raw\\WESAD\\S15\\S15.pkl",
+      "bytes": 827715045,
+      "mtime_ns": 1511512072000000000
+    },
+    {
+      "subject": "S16",
+      "path": "D:\\TriTueNhanTaoIOT\\giuaky_cuoiKy\\data\\raw\\WESAD\\S16\\S16.pkl",
+      "bytes": 898980304,
+      "mtime_ns": 1511512746000000000
+    },
+    {
+      "subject": "S17",
+      "path": "D:\\TriTueNhanTaoIOT\\giuaky_cuoiKy\\data\\raw\\WESAD\\S17\\S17.pkl",
+      "bytes": 946975319,
+      "mtime_ns": 1511512976000000000
+    }
+  ],
+  "window_definition": "half-open [t,t+8s); indices=floor(t*fs+1e-9)",
+  "sos": {
+    "bvp": [
+      [
+        0.07673977777860082,
+        0.15347955555720164,
+        0.07673977777860082,
+        1.0,
+        -0.0925960409226903,
+        0.05099474190936625
+      ],
+      [
+        1.0,
+        2.0,
+        1.0,
+        1.0,
+        -0.018159523238000613,
+        0.48072473901177665
+      ],
+      [
+        1.0,
+        -2.0,
+        1.0,
+        1.0,
+        -1.81266486179841,
+        0.8231352373537864
+      ],
+      [
+        1.0,
+        -2.0,
+        1.0,
+        1.0,
+        -1.9232065105290055,
+        0.9327437373909148
+      ]
+    ],
+    "ecg": [
+      [
+        5.187706086704446e-05,
+        0.00010375412173408892,
+        5.187706086704446e-05,
+        1.0,
+        -1.761238550372485,
+        0.785108494433512
+      ],
+      [
+        1.0,
+        2.0,
+        1.0,
+        1.0,
+        -1.8484972248692764,
+        0.8933191956480229
+      ],
+      [
+        1.0,
+        -2.0,
+        1.0,
+        1.0,
+        -1.909350189456358,
+        0.9129816970957857
+      ],
+      [
+        1.0,
+        -2.0,
+        1.0,
+        1.0,
+        -1.9741148207864447,
+        0.976223713956261
+      ]
+    ]
+  },
+  "qrs": {
+    "name": "adaptive_polarity_peak_detector",
+    "not_pan_tompkins": true,
+    "by_subject": {
+      "S2": {
+        "polarity": 1,
+        "candidate_count": 7429,
+        "accepted_count": 7429
+      },
+      "S3": {
+        "polarity": 1,
+        "candidate_count": 6547,
+        "accepted_count": 6547
+      },
+      "S4": {
+        "polarity": 1,
+        "candidate_count": 6954,
+        "accepted_count": 6954
+      },
+      "S5": {
+        "polarity": 1,
+        "candidate_count": 7290,
+        "accepted_count": 7290
+      },
+      "S6": {
+        "polarity": 1,
+        "candidate_count": 8366,
+        "accepted_count": 8366
+      },
+      "S7": {
+        "polarity": 1,
+        "candidate_count": 6237,
+        "accepted_count": 6237
+      },
+      "S8": {
+        "polarity": 1,
+        "candidate_count": 6889,
+        "accepted_count": 6889
+      },
+      "S9": {
+        "polarity": 1,
+        "candidate_count": 6869,
+        "accepted_count": 6869
+      },
+      "S10": {
+        "polarity": 1,
+        "candidate_count": 8424,
+        "accepted_count": 8424
+      },
+      "S11": {
+        "polarity": 1,
+        "candidate_count": 7862,
+        "accepted_count": 7862
+      },
+      "S13": {
+        "polarity": 1,
+        "candidate_count": 8024,
+        "accepted_count": 8024
+      },
+      "S14": {
+        "polarity": 1,
+        "candidate_count": 8178,
+        "accepted_count": 8178
+      },
+      "S15": {
+        "polarity": 1,
+        "candidate_count": 6948,
+        "accepted_count": 6947
+      },
+      "S16": {
+        "polarity": 1,
+        "candidate_count": 8043,
+        "accepted_count": 8043
+      },
+      "S17": {
+        "polarity": 1,
+        "candidate_count": 7589,
+        "accepted_count": 7589
+      }
+    }
+  },
+  "library_versions": {
+    "timestamp": "2026-10-04T16:12:26+07:00",
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "executable": "D:\\TriTueNhanTaoIOT\\giuaky_cuoiKy\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-10-10.0.19044-SP0",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "scipy": "1.18.1",
+    "torch": "2.14.0+cpu",
+    "cuda_available": false,
+    "cuda_device": null
+  }
+}

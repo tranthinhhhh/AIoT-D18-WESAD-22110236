@@ -1,0 +1,57 @@
+project:
+  dataset_version: wesad_d18_v2_order4_0p5_8hz
+  raw_data_dir: ../giuaky_cuoiKy/data/raw/WESAD
+  processed_dir: data/processed/wesad_d18_v2
+  output_dir: outputs
+split:
+  train: [S2, S3, S4, S5, S6, S7, S8, S9, S10]
+  validation: [S11, S13]
+  test: [S14, S15, S16, S17]
+preprocessing:
+  fs_bvp_original: 64
+  fs_bvp: 32
+  fs_ecg: 700
+  fs_label: 700
+  window_seconds: 8
+  stride_seconds: 2
+  bvp_band_hz: [0.5, 8.0]
+  ecg_band_hz: [5.0, 25.0]
+  butterworth_order: 4
+  label_purity_min: 0.90
+  condition_ids: [1, 2, 3]
+  condition_names: {1: Baseline, 2: Stress, 3: Amusement}
+  zscore_epsilon: 1.0e-8
+qrs:
+  detector: adaptive_polarity_peak_detector
+  local_block_seconds: 30
+  padding_seconds: 5
+  refractory_seconds: 0.28
+  height_fraction_p99: 0.35
+  prominence_fraction_p99: 0.25
+  refinement_seconds: 0.06
+qc:
+  min_r_peaks: 4
+  hr_range_bpm: [35.0, 200.0]
+  rr_range_seconds: [0.30, 1.7142857142857142]
+  flat_std_epsilon: 1.0e-8
+  bvp_plateau_min_seconds: 0.25
+  ecg_plateau_min_seconds: 0.02
+  plateau_diff_fraction: 1.0e-6
+  extreme_quantiles: [0.001, 0.999]
+baselines:
+  fft_n: 4096
+  fft_band_hz: [0.5833333333333334, 3.3333333333333335]
+training:
+  seeds: [42, 123, 999]
+  batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  max_epochs: 100
+  early_stopping_patience: 15
+  huber_delta_bpm: 5.0
+  dropout: 0.2
+  num_workers: 0
+  cpu_threads: 1
+benchmark:
+  warmup_iterations: 100
+  measured_iterations: 1000

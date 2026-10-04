@@ -1,0 +1,50 @@
+{
+  "status": "complete",
+  "created_at": "2026-10-04T16:34:20+07:00",
+  "manifest_hash": "bcc3bd93f84648772e6fad66980cbbcafa93c381ef3724b7d82aeff013841bd8",
+  "cpu": "Intel64 Family 6 Model 158 Stepping 13, GenuineIntel",
+  "os": "Windows-10-10.0.19044-SP0",
+  "torch": "2.14.0+cpu",
+  "dtype": "float32",
+  "threads": 1,
+  "batch_size": 1,
+  "warmup_iterations_network": 100,
+  "measured_iterations_network": 1000,
+  "network_only": {
+    "n": 1000,
+    "mean_ms": 0.2883544,
+    "median_ms": 0.2829,
+    "p95_ms": 0.326005,
+    "min_ms": 0.2631,
+    "max_ms": 0.6487
+  },
+  "preprocessing_offline_whole_record": {
+    "n": 5,
+    "mean_ms": 23.721400000000003,
+    "median_ms": 22.3644,
+    "p95_ms": 31.20394,
+    "min_ms": 20.1425,
+    "max_ms": 33.3939,
+    "subject": "S14",
+    "record_seconds": 5548.0,
+    "description": "resample_poly 64->32 Hz, full-record sosfiltfilt 0.5-8 Hz, then normalization; file I/O excluded"
+  },
+  "preprocessing_amortized_per_2s_update": {
+    "n": 5,
+    "mean_ms": 0.008560591844099604,
+    "median_ms": 0.008070876939732949,
+    "p95_ms": 0.011260894983760376,
+    "min_ms": 0.007269036448935401,
+    "max_ms": 0.012051208949837605,
+    "n_updates": 2771
+  },
+  "end_to_end_additive_offline_estimate_ms": {
+    "median": 0.29097087693973295,
+    "p95_conservative_sum": 0.33726589498376036
+  },
+  "observation_window_seconds": 8,
+  "update_stride_seconds": 2,
+  "warning": "Offline amortized preprocessing is not a causal streaming latency measurement; observation and update periods remain 8 s and 2 s.",
+  "trainable_parameters": 11153,
+  "checkpoint_bytes": 53089
+}

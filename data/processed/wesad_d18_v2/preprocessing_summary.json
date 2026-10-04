@@ -1,0 +1,294 @@
+{
+  "status": "complete",
+  "created_at": "2026-10-04T16:12:26+07:00",
+  "dataset_version": "wesad_d18_v2_order4_0p5_8hz",
+  "config_hash": "a9c5a3bfb869a6b473307e3c61b7d4e7b5d23ffe37f3cd8406d7612d1172bf0a",
+  "manifest_hash": "bcc3bd93f84648772e6fad66980cbbcafa93c381ef3724b7d82aeff013841bd8",
+  "windows_before_qc": 43385,
+  "windows_kept": 16422,
+  "windows_rejected": 26963,
+  "primary_reason_counts": {
+    "scope_condition": 26812,
+    "accepted": 16422,
+    "scope_purity": 134,
+    "rr_suspicious": 13,
+    "ecg_clipping": 4
+  },
+  "reason_category_counts": {
+    "scope": 26946,
+    "accepted": 16422,
+    "quality": 17
+  },
+  "windows_by_split": {
+    "test": 4444,
+    "train": 9770,
+    "validation": 2208
+  },
+  "windows_by_subject_condition": [
+    {
+      "subject": "S10",
+      "condition": "Amusement",
+      "n": 183
+    },
+    {
+      "subject": "S10",
+      "condition": "Baseline",
+      "n": 586
+    },
+    {
+      "subject": "S10",
+      "condition": "Stress",
+      "n": 359
+    },
+    {
+      "subject": "S11",
+      "condition": "Amusement",
+      "n": 181
+    },
+    {
+      "subject": "S11",
+      "condition": "Baseline",
+      "n": 587
+    },
+    {
+      "subject": "S11",
+      "condition": "Stress",
+      "n": 337
+    },
+    {
+      "subject": "S13",
+      "condition": "Amusement",
+      "n": 188
+    },
+    {
+      "subject": "S13",
+      "condition": "Baseline",
+      "n": 587
+    },
+    {
+      "subject": "S13",
+      "condition": "Stress",
+      "n": 328
+    },
+    {
+      "subject": "S14",
+      "condition": "Amusement",
+      "n": 183
+    },
+    {
+      "subject": "S14",
+      "condition": "Baseline",
+      "n": 587
+    },
+    {
+      "subject": "S14",
+      "condition": "Stress",
+      "n": 334
+    },
+    {
+      "subject": "S15",
+      "condition": "Amusement",
+      "n": 183
+    },
+    {
+      "subject": "S15",
+      "condition": "Baseline",
+      "n": 585
+    },
+    {
+      "subject": "S15",
+      "condition": "Stress",
+      "n": 340
+    },
+    {
+      "subject": "S16",
+      "condition": "Amusement",
+      "n": 181
+    },
+    {
+      "subject": "S16",
+      "condition": "Baseline",
+      "n": 587
+    },
+    {
+      "subject": "S16",
+      "condition": "Stress",
+      "n": 334
+    },
+    {
+      "subject": "S17",
+      "condition": "Amusement",
+      "n": 183
+    },
+    {
+      "subject": "S17",
+      "condition": "Baseline",
+      "n": 588
+    },
+    {
+      "subject": "S17",
+      "condition": "Stress",
+      "n": 359
+    },
+    {
+      "subject": "S2",
+      "condition": "Amusement",
+      "n": 178
+    },
+    {
+      "subject": "S2",
+      "condition": "Baseline",
+      "n": 563
+    },
+    {
+      "subject": "S2",
+      "condition": "Stress",
+      "n": 304
+    },
+    {
+      "subject": "S3",
+      "condition": "Amusement",
+      "n": 181
+    },
+    {
+      "subject": "S3",
+      "condition": "Baseline",
+      "n": 566
+    },
+    {
+      "subject": "S3",
+      "condition": "Stress",
+      "n": 313
+    },
+    {
+      "subject": "S4",
+      "condition": "Amusement",
+      "n": 183
+    },
+    {
+      "subject": "S4",
+      "condition": "Baseline",
+      "n": 576
+    },
+    {
+      "subject": "S4",
+      "condition": "Stress",
+      "n": 314
+    },
+    {
+      "subject": "S5",
+      "condition": "Amusement",
+      "n": 184
+    },
+    {
+      "subject": "S5",
+      "condition": "Baseline",
+      "n": 596
+    },
+    {
+      "subject": "S5",
+      "condition": "Stress",
+      "n": 320
+    },
+    {
+      "subject": "S6",
+      "condition": "Amusement",
+      "n": 183
+    },
+    {
+      "subject": "S6",
+      "condition": "Baseline",
+      "n": 587
+    },
+    {
+      "subject": "S6",
+      "condition": "Stress",
+      "n": 322
+    },
+    {
+      "subject": "S7",
+      "condition": "Amusement",
+      "n": 183
+    },
+    {
+      "subject": "S7",
+      "condition": "Baseline",
+      "n": 590
+    },
+    {
+      "subject": "S7",
+      "condition": "Stress",
+      "n": 317
+    },
+    {
+      "subject": "S8",
+      "condition": "Amusement",
+      "n": 182
+    },
+    {
+      "subject": "S8",
+      "condition": "Baseline",
+      "n": 582
+    },
+    {
+      "subject": "S8",
+      "condition": "Stress",
+      "n": 332
+    },
+    {
+      "subject": "S9",
+      "condition": "Amusement",
+      "n": 183
+    },
+    {
+      "subject": "S9",
+      "condition": "Baseline",
+      "n": 583
+    },
+    {
+      "subject": "S9",
+      "condition": "Stress",
+      "n": 320
+    }
+  ],
+  "hr_ref_bpm": {
+    "count": 16422.0,
+    "mean": 80.0514529457274,
+    "std": 18.87877625466292,
+    "min": 46.15384615384615,
+    "25%": 67.25572633810535,
+    "50%": 75.74011941061241,
+    "75%": 87.6826722338203,
+    "max": 154.50145208131764
+  },
+  "runtime_seconds_by_subject": {
+    "S2": 5.504,
+    "S3": 6.053,
+    "S4": 6.414,
+    "S5": 6.546,
+    "S6": 7.609,
+    "S7": 5.301,
+    "S8": 5.581,
+    "S9": 4.84,
+    "S10": 5.699,
+    "S11": 7.157,
+    "S13": 5.802,
+    "S14": 6.047,
+    "S15": 5.904,
+    "S16": 5.825,
+    "S17": 5.365
+  },
+  "checks": {
+    "window_samples": 256,
+    "finite": true,
+    "unique_window_id": true,
+    "subject_sets_disjoint": true,
+    "alignment": true
+  },
+  "notes": [
+    "HR_ref is an automatic ECG-derived reference, not absolute ground truth.",
+    "Detector is an adaptive polarity-aware amplitude detector, not Pan-Tompkins.",
+    "Filtering is zero-phase offline processing on continuous recordings before windowing.",
+    "Scope exclusions and signal-quality exclusions are counted separately; primary reasons do not double count."
+  ]
+}
